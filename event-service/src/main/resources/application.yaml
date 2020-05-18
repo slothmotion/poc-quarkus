@@ -1,0 +1,35 @@
+"%dev":
+  quarkus:
+
+    http:
+      host: localhost
+      port: 8081
+
+    container-image:
+      build: true
+      push: false
+
+    jib:
+      base-jvm-image: fabric8/java-alpine-openjdk8-jre
+
+    datasource:
+      db-kind: postgresql
+      username: postgres
+      password: postgres
+      jdbc:
+        url: jdbc:postgresql://localhost:5432/event_db
+
+    hibernate-orm:
+      dialect: org.hibernate.dialect.PostgreSQL95Dialect
+      database:
+        generation: drop-and-create
+
+    log:
+      level: INFO
+
+event:
+  services:
+    - name: "queue"
+      enabled: true
+    - name: "database"
+      enabled: true

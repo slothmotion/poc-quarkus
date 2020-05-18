@@ -1,0 +1,25 @@
+task runPostgres(type: Exec) {
+	group 'postgres'
+	description 'boots postgres server'
+	outputs.upToDateWhen { false }
+
+	executable 'docker'
+	args 'run', '--rm', '-d',
+			'--ulimit', 'memlock=-1:-1',
+			'--name', 'postgres',
+			'-e', 'POSTGRES_USER=postgres',
+			'-e', "POSTGRES_PASSWORD=postgres",
+			'-e', "POSTGRES_DB=event_db",
+			'-v', "eventData:/var/lib/postgresql/data",
+			'-p', '5432:5432',
+			'postgres:10.5'
+}
+
+task killPostgres(type: Exec) {
+	group = 'postgres'
+	description = 'removes postgres server'
+	outputs.upToDateWhen { false }
+
+	executable 'docker'
+	args 'rm', 'postgres', '--force'
+}

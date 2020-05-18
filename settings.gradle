@@ -1,0 +1,15 @@
+pluginManagement {
+	repositories {
+		mavenCentral()
+		gradlePluginPortal()
+	}
+	plugins {
+		id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+		id 'io.freefair.lombok' version '5.1.0'
+		id 'io.quarkus' version QUARKUS_VERSION
+	}
+}
+
+rootProject.name = 'poc-quarkus'
+
+include 'event-service'

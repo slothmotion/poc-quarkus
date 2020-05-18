@@ -1,0 +1,20 @@
+plugins {
+	id 'java'
+	id 'io.quarkus'
+}
+
+dependencies {
+	implementation(enforcedPlatform("io.quarkus:quarkus-bom:$QUARKUS_VERSION"))
+
+	implementation 'io.quarkus:quarkus-resteasy'
+	implementation 'io.quarkus:quarkus-resteasy-jackson'
+	implementation 'io.quarkus:quarkus-config-yaml'
+	implementation 'io.quarkus:quarkus-container-image-jib'
+	implementation 'io.quarkus:quarkus-hibernate-orm'
+	implementation 'io.quarkus:quarkus-jdbc-postgresql'
+
+	implementation 'org.mapstruct:mapstruct'
+	annotationProcessor 'org.mapstruct:mapstruct-processor'
+}
+
+apply from: "$projectDir/database.gradle"
