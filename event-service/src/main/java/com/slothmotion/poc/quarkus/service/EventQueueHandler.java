@@ -1,10 +1,10 @@
-package com.slothmotion.poc.javaee6.quarkus.service;
+package com.slothmotion.poc.quarkus.service;
 
 import javax.enterprise.context.RequestScoped;
 
-import com.slothmotion.poc.javaee6.quarkus.rest.dto.EventDTO;
-import com.slothmotion.poc.javaee6.quarkus.service.api.EventHandler;
-import com.slothmotion.poc.javaee6.quarkus.service.api.EventTarget;
+import com.slothmotion.poc.quarkus.rest.dto.EventDTO;
+import com.slothmotion.poc.quarkus.service.api.EventHandler;
+import com.slothmotion.poc.quarkus.service.api.EventTarget;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,6 +18,6 @@ class EventQueueHandler implements EventHandler {
 
 	@Override
 	public void handle(EventDTO event) {
-		LOGGER.info("Submitting event: {}", event);
+		LOGGER.debug("Submitting event: {}", event);
 	}
 }

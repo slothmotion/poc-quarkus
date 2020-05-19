@@ -1,4 +1,4 @@
-package com.slothmotion.poc.javaee6.quarkus.rest.dto;
+package com.slothmotion.poc.quarkus.rest.dto;
 
 import java.io.Serializable;
 

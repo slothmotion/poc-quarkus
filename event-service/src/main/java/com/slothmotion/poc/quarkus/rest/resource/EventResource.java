@@ -1,4 +1,4 @@
-package com.slothmotion.poc.javaee6.quarkus.rest.resource;
+package com.slothmotion.poc.quarkus.rest.resource;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
@@ -11,9 +11,9 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import com.slothmotion.poc.javaee6.quarkus.repository.exception.MissingEntityException;
-import com.slothmotion.poc.javaee6.quarkus.rest.dto.EventDTO;
-import com.slothmotion.poc.javaee6.quarkus.service.EventService;
+import com.slothmotion.poc.quarkus.repository.exception.MissingEntityException;
+import com.slothmotion.poc.quarkus.rest.dto.EventDTO;
+import com.slothmotion.poc.quarkus.service.EventService;
 import org.apache.http.HttpStatus;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

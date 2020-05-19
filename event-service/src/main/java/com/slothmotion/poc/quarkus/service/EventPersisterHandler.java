@@ -1,13 +1,13 @@
-package com.slothmotion.poc.javaee6.quarkus.service;
+package com.slothmotion.poc.quarkus.service;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 
-import com.slothmotion.poc.javaee6.quarkus.repository.EventRepository;
-import com.slothmotion.poc.javaee6.quarkus.repository.model.Event;
-import com.slothmotion.poc.javaee6.quarkus.rest.dto.EventDTO;
-import com.slothmotion.poc.javaee6.quarkus.service.api.EventHandler;
-import com.slothmotion.poc.javaee6.quarkus.service.api.EventTarget;
+import com.slothmotion.poc.quarkus.repository.EventRepository;
+import com.slothmotion.poc.quarkus.repository.model.Event;
+import com.slothmotion.poc.quarkus.rest.dto.EventDTO;
+import com.slothmotion.poc.quarkus.service.api.EventHandler;
+import com.slothmotion.poc.quarkus.service.api.EventTarget;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -26,7 +26,7 @@ class EventPersisterHandler implements EventHandler {
 
 	@Override
 	public void handle(EventDTO event) {
-		LOGGER.info("Persisting event: {}", event);
+		LOGGER.debug("Persisting event: {}", event);
 
 		Event eventEntity = new Event();
 		eventEntity.setId(event.getId());

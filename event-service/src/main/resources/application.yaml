@@ -26,6 +26,9 @@
 
     log:
       level: INFO
+      category:
+        "com.slothmotion":
+          level: DEBUG
 
 event:
   services:

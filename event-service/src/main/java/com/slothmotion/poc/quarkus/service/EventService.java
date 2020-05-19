@@ -1,4 +1,4 @@
-package com.slothmotion.poc.javaee6.quarkus.service;
+package com.slothmotion.poc.quarkus.service;
 
 import java.util.Optional;
 import javax.enterprise.context.RequestScoped;
@@ -6,14 +6,14 @@ import javax.enterprise.inject.Any;
 import javax.enterprise.inject.Instance;
 import javax.inject.Inject;
 
-import com.slothmotion.poc.javaee6.quarkus.configuration.EventConfig;
-import com.slothmotion.poc.javaee6.quarkus.configuration.EventServiceConfig;
-import com.slothmotion.poc.javaee6.quarkus.mapper.EventMapper;
-import com.slothmotion.poc.javaee6.quarkus.repository.EventRepository;
-import com.slothmotion.poc.javaee6.quarkus.repository.exception.MissingEntityException;
-import com.slothmotion.poc.javaee6.quarkus.rest.dto.EventDTO;
-import com.slothmotion.poc.javaee6.quarkus.service.api.EventHandler;
-import com.slothmotion.poc.javaee6.quarkus.service.api.EventTargetAnnotationLiteral;
+import com.slothmotion.poc.quarkus.configuration.EventConfig;
+import com.slothmotion.poc.quarkus.configuration.EventServiceConfig;
+import com.slothmotion.poc.quarkus.mapper.EventMapper;
+import com.slothmotion.poc.quarkus.repository.EventRepository;
+import com.slothmotion.poc.quarkus.repository.exception.MissingEntityException;
+import com.slothmotion.poc.quarkus.rest.dto.EventDTO;
+import com.slothmotion.poc.quarkus.service.api.EventHandler;
+import com.slothmotion.poc.quarkus.service.api.EventTargetAnnotationLiteral;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -39,6 +39,8 @@ public class EventService {
 	}
 
 	public void saveEvent(EventDTO event) {
+		LOGGER.debug("Processing event: {}", event);
+
 		Optional.ofNullable(config.getServices()).ifPresent(list ->	list.stream()
 				.filter(EventServiceConfig::isEnabled)
 				.map(it -> handlers.select(EventTargetAnnotationLiteral.eventTarget(it.getName())).get())

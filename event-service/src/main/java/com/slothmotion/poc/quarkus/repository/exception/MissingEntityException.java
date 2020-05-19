@@ -1,4 +1,4 @@
-package com.slothmotion.poc.javaee6.quarkus.repository.exception;
+package com.slothmotion.poc.quarkus.repository.exception;
 
 import lombok.Getter;
 

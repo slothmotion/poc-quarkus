@@ -1,4 +1,4 @@
-package com.slothmotion.poc.javaee6.quarkus.configuration;
+package com.slothmotion.poc.quarkus.configuration;
 
 import java.util.List;
 

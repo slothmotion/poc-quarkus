@@ -1,4 +1,4 @@
-package com.slothmotion.poc.javaee6.quarkus.service.api;
+package com.slothmotion.poc.quarkus.service.api;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

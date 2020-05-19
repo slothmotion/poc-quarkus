@@ -1,4 +1,4 @@
-package com.slothmotion.poc.javaee6.quarkus.rest;
+package com.slothmotion.poc.quarkus.rest;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;

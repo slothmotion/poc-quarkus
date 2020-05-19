@@ -1,4 +1,4 @@
-package com.slothmotion.poc.javaee6.quarkus.service.api;
+package com.slothmotion.poc.quarkus.service.api;
 
 import javax.enterprise.util.AnnotationLiteral;
 

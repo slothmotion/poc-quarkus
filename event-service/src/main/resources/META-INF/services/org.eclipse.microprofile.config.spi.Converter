@@ -1,1 +1,1 @@
-com.slothmotion.poc.javaee6.quarkus.configuration.converter.EventServiceConfigConverter
+com.slothmotion.poc.quarkus.configuration.converter.EventServiceConfigConverter

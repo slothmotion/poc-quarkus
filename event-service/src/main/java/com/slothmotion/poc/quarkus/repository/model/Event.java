@@ -1,4 +1,4 @@
-package com.slothmotion.poc.javaee6.quarkus.repository.model;
+package com.slothmotion.poc.quarkus.repository.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

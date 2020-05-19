@@ -1,4 +1,4 @@
-package com.slothmotion.poc.javaee6.quarkus.repository;
+package com.slothmotion.poc.quarkus.repository;
 
 import java.util.Optional;
 import javax.enterprise.context.RequestScoped;
@@ -6,7 +6,7 @@ import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
 
-import com.slothmotion.poc.javaee6.quarkus.repository.model.Event;
+import com.slothmotion.poc.quarkus.repository.model.Event;
 
 @RequestScoped
 public class EventRepository implements CrudRepository<Event, String> {

@@ -1,4 +1,4 @@
-package com.slothmotion.poc.javaee6.quarkus.repository;
+package com.slothmotion.poc.quarkus.repository;
 
 import java.util.Optional;
 
